@@ -10,7 +10,8 @@ const options = {
 
 const fetchFromAPI = async (url) => {
     try {
-        const response = await fetch(`${BASE_URL}/${url}`, options);
+        const URL = `${BASE_URL}/search?q=${url}&part=snippet%2Cid&regionCode=IN&maxResults=50&order=date`
+        const response = await fetch(URL, options);
         const result = await response.json();
         return result
     } catch (error) {

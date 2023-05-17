@@ -19,7 +19,7 @@ const Videos = () => {
         return <h1>Loading ....</h1>
     
     return (
-        <div className="grid grid-cols-4 gap-3 p-6 bg-[#272727] text-white">
+        <div className="grid lg:grid-cols-4 gap-3 p-6 bg-[#272727] text-white">
             {
             VideoList.map(data => {
                 return <VideoItem key={
