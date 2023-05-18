@@ -23,7 +23,7 @@ const ChannelVideos = () => {
     return <h1>Loading ....</h1>
 
 return (
-    <div className="grid lg:grid-cols-4 gap-3 p-6 bg-[#272727] text-white lg:px-12">
+    <div className="grid lg:grid-cols-4 gap-5 p-3 lg:p-6 bg-[#272727] text-white lg:px-12">
         {
         VideoList.map(data => {
             return <VideoItem key={

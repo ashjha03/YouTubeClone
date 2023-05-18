@@ -1,20 +1,19 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 const VideoItem = ({video}) => {
   const navigate = useNavigate()
-
   const handleClick = async () => {
     const channelId = video.snippet.channelId
     navigate(`/channelDetail/${channelId}`)
   }
 
   return (
-    <div className='border rounded-lg'>
-      <div className="videoImg">
-        <img src={`${video.snippet.thumbnails.high.url}`} alt="" />
-      </div>
-      <div className="videoHead text-center p-2">
+    <div className='shadow-[#000] shadow-md rounded-lg'>
+      <Link to={`/watchVideo/${video.id.videoId}`} className="videoImg rounded-lg">
+        <img className='rounded-lg' src={`${video.snippet.thumbnails.high.url}`} alt="" />
+      </Link>
+      <div className="videoHead text-center py-6 bg-[#333] rounded-lg">
         <h1 className='text-md'>{video.snippet.title}</h1>
         <h3 onClick={handleClick} className='text-sm cursor-pointer'>{video.snippet.channelTitle}</h3>
       </div>
