@@ -10,6 +10,8 @@ const Category = () => {
     "Competitive Programming",
     "DSA",
     "Leetcode",
+    "Striver",
+    "Take U Forward"
   ];
   return (
     <div>

@@ -18,7 +18,7 @@ const SuggestedVideo = ({videoLink}) => {
 
   if(!videoList)  return <h1>Loading ...</h1>
   return (
-    <div className="p-5 bg-[#272727] text-white h-[100vh] overflow-scroll">
+    <div className="p-5 b text-white h-[100vh] overflow-scroll">
             {
             videoList.map(data => {
                 return <VideoItem key={

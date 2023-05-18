@@ -17,6 +17,7 @@ const VideoPlayer = () => {
 
   useEffect(() => {
     loadVideoData();
+    // eslint-disable-next-line
   }, []);
 
   if (!videoDetail) return <h1>Loading ...</h1>;
@@ -35,7 +36,7 @@ const VideoPlayer = () => {
             <p className="pl-4">{videoDetail.statistics.viewCount} Views</p>
             <p className="pl-6">Published at : {videoDetail.snippet.publishedAt.substring(0, 10)}</p>
           </span>
-          <div className="bg-[#222] w-full lg:w-[68vw] mt-4 py-2 px-4 rounded-lg">
+          <div className="bg-[#222] w-full h-[220px] overflow-y-scroll lg:w-[68vw] mt-4 py-2 px-4 rounded-lg">
             <p>{videoDetail.snippet.description}</p>
           </div>
         </div>
