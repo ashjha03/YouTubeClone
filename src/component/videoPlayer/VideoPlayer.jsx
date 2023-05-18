@@ -12,7 +12,6 @@ const VideoPlayer = () => {
 
   const loadVideoData = async () => {
     const data = await fetchFromApi(requested_url);
-    console.log(data.items[0]);
     setVideoDetail(data.items[0]);
   };
 
@@ -23,7 +22,7 @@ const VideoPlayer = () => {
   if (!videoDetail) return <h1>Loading ...</h1>;
   return (
     <div className="p-4 bg-[#333] lg:flex text-[#f3f3f3]">
-      <div className="videoPlay w-[70vw]">
+      <div className="videoPlay lg:w-[70vw]">
         <ReactPlayer
             width='70vw'
             height='65vh'
@@ -36,12 +35,12 @@ const VideoPlayer = () => {
             <p className="pl-4">{videoDetail.statistics.viewCount} Views</p>
             <p className="pl-6">Published at : {videoDetail.snippet.publishedAt.substring(0, 10)}</p>
           </span>
-          <div className="bg-[#222] mt-4 py-2 px-4 rounded-lg">
+          <div className="bg-[#222] w-full lg:w-[68vw] mt-4 py-2 px-4 rounded-lg">
             <p>{videoDetail.snippet.description}</p>
           </div>
         </div>
       </div>
-      <SuggestedVideo />
+      <SuggestedVideo videoLink={id} />
     </div>
   );
 };
