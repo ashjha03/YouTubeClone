@@ -9,7 +9,7 @@ const VideoItem = ({video}) => {
   }
 
   return (
-    <div className='shadow-[#000] shadow-md rounded-lg mb-4'>
+    <div className='shadow-[#000] shadow-md rounded-lg mb-4 max-w-[90vw] overflow-hidden'>
       <Link to={`/watchVideo/${video.id.videoId}`} className="videoImg rounded-lg">
         <img className='rounded-lg' src={`${video.snippet.thumbnails.high.url}`} alt="Thumbnail" />
       </Link>

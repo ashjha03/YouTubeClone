@@ -15,11 +15,11 @@ const Category = () => {
   ];
   return (
     <div>
-    <div className="bg-[#202020] text-[#f4f4f4] px-5 py-2 flex">
+    <div className="bg-[#202020] text-[#f4f4f4] px-5 lg:py-2 flex">
       <ul className="flex mx-auto w-[100vw] overflow-scroll items-center">
         {category.map((data, index) => {
           return (
-            <li key={index} className="px-2">
+            <li key={index} className="ml-3">
               <Link to={`/videos/${data}`}>{data}</Link>
             </li>
           );
