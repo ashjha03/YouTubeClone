@@ -29,7 +29,7 @@ const ChannelDetails = () => {
           alt="Banner"
         />
       </div>
-      <div className="bg-[#333] text-[#f3f3f3] px-12 py-5">
+      <div className="bg-[#333] text-[#f3f3f3] lg:px-12 md:p-4 lg:py-5">
         <div className="channelDetail flex items-center p-4">
           <img
             src={channelData.snippet.thumbnails.high.url}
@@ -38,18 +38,18 @@ const ChannelDetails = () => {
           />
           <div className="channelHead ml-8">
             <h1 className="text-xl">{channelData.snippet.title}</h1>
-            <div className="text-md flex">
+            <div className="text-md lg:flex">
               <p className="">{channelData.snippet.customUrl} </p>
-              <p className="ml-4 ">
+              <p className="lg:ml-4">
                 {channelData.statistics.subscriberCount} Subscribers
               </p>
-              <p className="ml-4 ">
+              <p className="lg:ml-4 ">
                 {channelData.statistics.videoCount} Videos
               </p>
             </div>
           </div>
         </div>
-        <p>{channelData.snippet.description}</p>
+        <p className="p-2">{channelData.snippet.description}</p>
       </div>
       <ChannelVideos />
     </>
