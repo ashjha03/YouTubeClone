@@ -4,6 +4,7 @@ import Videos from "./component/videos/Videos"
 import Navbar from "./layout/Navbar"
 import SearchCategory from "./search/SearchCategory"
 import ChannelDetails from "./component/channel/ChannelDetails"
+import Footer from "./layout/Footer"
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/videos/:id" element={<SearchCategory />} />
         <Route path="/channelDetail/:id" element={<ChannelDetails />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
