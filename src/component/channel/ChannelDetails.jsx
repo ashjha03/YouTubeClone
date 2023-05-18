@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import fetchFromAPI from "../../fetchFromAPI/fetchFromAPI";
 import ChannelVideos from "./ChannelVideos";
+import Spinner from "../../layout/Spinner"
 
 const ChannelDetails = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ const ChannelDetails = () => {
     // eslint-disable-next-line
   }, []);
 
-  if (!channelData) return <h3>Loading ...</h3>;
+  if (!channelData) return <Spinner />
   return (
     <>
       <div className="banner">

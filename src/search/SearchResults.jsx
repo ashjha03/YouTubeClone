@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import fetchFromApi from "../fetchFromAPI/fetchFromAPI"
 import VideoItem from "../component/videos/VideoItem"
+import Spinner from "../layout/Spinner"
 
 const SearchResults = () => {
     const {id} = useParams()
@@ -19,7 +20,7 @@ const SearchResults = () => {
         // eslint-disable-next-line
     }, [])
 
-    if(!videoList)  return <h1>Loading ...</h1>
+    if(!videoList)  return <Spinner />
   return (
     <div className="grid lg:grid-cols-4 gap-5 p-3 lg:pt-5 bg-[#272727] text-white">
             {

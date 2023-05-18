@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import fetchFromApi from "../../fetchFromAPI/fetchFromAPI";
 import { AiFillLike } from "react-icons/ai";
 import SuggestedVideo from "./SuggestedVideo";
+import Spinner from "../../layout/Spinner";
 
 const VideoPlayer = () => {
   const { id } = useParams();
@@ -20,13 +21,12 @@ const VideoPlayer = () => {
     // eslint-disable-next-line
   }, []);
 
-  if (!videoDetail) return <h1>Loading ...</h1>;
+  if (!videoDetail) return <Spinner />
   return (
     <div className="p-4 bg-[#333] lg:flex text-[#f3f3f3]">
       <div className="videoPlay lg:w-[70vw]">
         <ReactPlayer
-            width='70vw'
-            height='65vh'
+          width="100%"
           url={`https://www.youtube.com/watch?v=${id}`}
         />
         <div className="videoDetails py-4">

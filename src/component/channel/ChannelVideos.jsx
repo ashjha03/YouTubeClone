@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import fetchFromAPI from "../../fetchFromAPI/fetchFromAPI"
 import { useParams } from "react-router-dom"
 import VideoItem from "../videos/VideoItem"
+import Spinner from "../../layout/Spinner"
 
 const ChannelVideos = () => {
     const [VideoList, setVideoList] = useState([])
@@ -20,7 +21,7 @@ const ChannelVideos = () => {
     }, [])
 
     if (!VideoList.length) 
-    return <h1>Loading ....</h1>
+    return <Spinner />
 
 return (
     <div className="grid lg:grid-cols-4 gap-5 p-3 lg:p-6 bg-[#272727] text-white lg:px-12">

@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react"
 import fetchFromAPI from '../../fetchFromAPI/fetchFromAPI'
 import VideoItem from "./VideoItem"
+import Spinner from "../../layout/Spinner"
 
 const Videos = () => {
     const [VideoList, setVideoList] = useState([])
@@ -17,7 +18,7 @@ const Videos = () => {
     }, [])
 
     if (!VideoList.length) 
-        return <h1>Loading ....</h1>
+        return <Spinner />
     
     return (
         <div className="grid lg:grid-cols-4 gap-5 p-3 lg:pt-5 bg-[#272727] text-white">

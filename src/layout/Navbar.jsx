@@ -21,7 +21,7 @@ const Navbar = () => {
       </Link>
       <form onSubmit={handleSubmit} className="searchBar">
         <input
-          className="border text-black py-2 px-5 w-[60vw] lg:w-[30vw] rounded-xl"
+          className="border text-[#f4f4f4] bg-[#333] outline-none py-2 px-5 w-[60vw] lg:w-[30vw] rounded-xl"
           placeholder="Search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}

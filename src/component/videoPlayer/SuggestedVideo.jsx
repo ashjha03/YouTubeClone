@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import fetchFromApi from "../../fetchFromAPI/fetchFromAPI"
 import VideoItem from "../videos/VideoItem"
+import Spinner from "../../layout/Spinner"
 
 const SuggestedVideo = ({videoLink}) => {
   const requested_url = `search?relatedToVideoId=${videoLink}&part=id%2Csnippet&type=video&maxResults=5`
@@ -16,7 +17,7 @@ const SuggestedVideo = ({videoLink}) => {
     // eslint-disable-next-line
   }, [])
 
-  if(!videoList)  return <h1>Loading ...</h1>
+  if(!videoList)  return <Spinner />
   return (
     <div className="p-5 b text-white h-[100vh] overflow-scroll">
             {
