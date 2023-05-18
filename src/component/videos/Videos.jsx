@@ -4,12 +4,13 @@ import VideoItem from "./VideoItem"
 
 const Videos = () => {
     const [VideoList, setVideoList] = useState([])
-    const requested_url = 'search?relatedToVideoId=7ghhRHRP6t4&part=id%2Csnippet&type=video&maxResults=5'
+    const requested_url = 'search?relatedToVideoId=7ghhRHRP6t4&part=id%2Csnippet&type=video&maxResults=10'
 
     const updateData = async () => {
         const data = await fetchFromAPI(requested_url)
         setVideoList(data.items)
     }
+
     useEffect(() => {
         updateData()
         // eslint-disable-next-line

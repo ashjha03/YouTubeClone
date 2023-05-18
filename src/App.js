@@ -3,6 +3,7 @@ import Category from "./category/Category"
 import Videos from "./component/videos/Videos"
 import Navbar from "./layout/Navbar"
 import SearchCategory from "./search/SearchCategory"
+import ChannelDetails from "./component/channel/ChannelDetails"
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Videos />} />
         <Route path="/videos/:id" element={<SearchCategory />} />
+        <Route path="/channelDetail/:id" element={<ChannelDetails />} />
       </Routes>
     </BrowserRouter>
   )
