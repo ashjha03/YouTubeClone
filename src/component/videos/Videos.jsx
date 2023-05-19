@@ -17,7 +17,7 @@ const Videos = () => {
         // eslint-disable-next-line
     }, [])
 
-    if (!VideoList.length) 
+    if (!VideoList) 
         return <Spinner />
     
     return (
