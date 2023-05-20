@@ -12,7 +12,6 @@ const ChannelVideos = () => {
     const updateData = async () => {
         const data = await fetchFromAPI(requested_url)
         setVideoList(data.items)
-        console.log(VideoList);
     }
 
     useEffect(() => {

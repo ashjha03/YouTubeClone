@@ -27,6 +27,7 @@ const VideoPlayer = () => {
       <div className="videoPlay lg:w-[70vw]">
         <ReactPlayer
           width="100%"
+          controls={true}
           url={`https://www.youtube.com/watch?v=${id}`}
         />
         <div className="videoDetails py-4">

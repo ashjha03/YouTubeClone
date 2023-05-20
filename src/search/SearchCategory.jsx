@@ -10,7 +10,6 @@ const SearchCategory = () => {
     const updateData = async () => {
       const data = await fetchSearchResults(query)
       setVideoList(data.items)
-      console.log(VideoList)
   }
   useEffect(() => {
       updateData()
